@@ -1,4 +1,4 @@
-#ifndef SPINLOCKER_H
+﻿#ifndef SPINLOCKER_H
 #define SPINLOCKER_H
 
 #include "utilsglobal.h"
@@ -8,7 +8,7 @@ namespace Utils {
 
 //! Класс для удобной и простой блокировки и разблокировки SpinLock и RecursiveSpinLock
 template <typename T>
-class UTILSLIB SpinLocker
+class SpinLocker
 {
 public:
     //! Конструктор класса

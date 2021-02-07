@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.10)
+﻿cmake_minimum_required(VERSION 3.10)
 project(utils VERSION 1.0.0)
 
 set(PRODUCTNAME "Utils Library")
@@ -15,5 +15,3 @@ target_compile_definitions(${PROJECT_NAME} PRIVATE -DUTILS_LIBRARY)
 
 find_package(Qt5Core)
 target_link_libraries(${PROJECT_NAME} Qt5::Core)
-
-target_link_libraries(${PROJECT_NAME} atomic)

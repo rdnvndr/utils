@@ -1,4 +1,8 @@
-#include "recursivespinlock.h"
+﻿#include "recursivespinlock.h"
+
+#ifdef _MSC_VER
+#include <windows.h>
+#endif
 
 namespace RTPTechGroup {
 namespace Utils {

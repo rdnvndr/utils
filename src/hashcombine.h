@@ -1,9 +1,29 @@
 ﻿#pragma once
 
+#include <cstddef>
+#include <functional>
+
 //! Функция комбинирования нескольких хэш значений
 /*! Данная функция предназначена для комбинирования нескольких хэш значений\n
     Пример:\n
       \code
+            namespace std {
+
+            /// <summary> Функтор хеширования std::tuple </summary>
+            template <typename ... TT>
+            struct hash<std::tuple<TT...>>
+            {
+                /// <summary> Оператор вызова функции </summary>
+                /// <param name="tt"> Аргументы для хеширования </param>
+                /// <returns> Хэш аргументов </returns>
+                size_t operator()(const std::tuple<TT...>& tt) const noexcept
+                {
+                    return hash_combine<std::tuple<TT...> >(tt);
+                }
+            };
+
+            }
+
             struct Person
             {
                 std::string m_name, m_surname;
